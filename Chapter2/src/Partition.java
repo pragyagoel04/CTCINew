@@ -19,6 +19,7 @@ public class Partition {
 		System.out.println();
 		ll.head = partition(ll.head, n);
 		ll.print();
+		in.close();
 
 	}
 
@@ -52,7 +53,7 @@ public class Partition {
 	private static class ListNode {
 		private int data;
 		private ListNode next;
-		private ListNode previous;
+		//private ListNode previous;
 
 		public ListNode(int data) {
 			this.data = data;
@@ -70,7 +71,7 @@ public class Partition {
 				tail = head;
 			} else {
 				ListNode temp = new ListNode(data);
-				temp.previous = tail;
+			//	temp.previous = tail;
 				tail.next = temp;
 				tail = tail.next;
 			}

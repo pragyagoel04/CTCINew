@@ -41,7 +41,7 @@ public class FindKthToLast {
 	private static class ListNode {
 		private int data;
 		private ListNode next;
-		private ListNode previous;
+		//private ListNode previous;
 
 		public ListNode(int data) {
 			this.data = data;
@@ -52,16 +52,16 @@ public class FindKthToLast {
 	private static class LinkedList {
 		ListNode head = null;
 		ListNode tail = null;
-		int size = 0;
+		//int size = 0;
 
 		public void addLast(int data) {
-			size++;
+		//	size++;
 			if (head == null) {
 				head = new ListNode(data);
 				tail = head;
 			} else {
 				ListNode temp = new ListNode(data);
-				temp.previous = tail;
+				//temp.previous = tail;
 				tail.next = temp;
 				tail = tail.next;
 			}

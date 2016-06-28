@@ -22,7 +22,7 @@ public class RemoveDuplicates {
 	}
 
 	public static void RemDupsWithBuffer(ListNode head) {
-		Hashtable table = new Hashtable();
+		Hashtable<ListNode, Boolean> table = new Hashtable<ListNode, Boolean>();
 		ListNode previous = null;
 		while (head != null) {
 			if (table.containsKey(head.data)) {
@@ -62,28 +62,28 @@ public class RemoveDuplicates {
 	private static class ListNode {
 		private int data;
 		private ListNode next;
-		private ListNode previous;
+		//private ListNode previous;
 
 		public ListNode(int data) {
 			this.data = data;
 			this.next = null;
-			this.previous = null;
+		//	this.previous = null;
 		}
 	}
 
 	private static class LinkedList {
 		ListNode head = null;
 		ListNode tail = null;
-		int size = 0;
+		//int size = 0;
 
 		public void addLast(int data) {
-			size++;
+			//size++;
 			if (head == null) {
 				head = new ListNode(data);
 				tail = head;
 			} else {
 				ListNode temp = new ListNode(data);
-				temp.previous = tail;
+				//temp.previous = tail;
 				tail.next = temp;
 				tail = tail.next;
 			}
